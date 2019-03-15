@@ -1,0 +1,136 @@
+
+body {
+  margin: 0;
+  text-align: center;
+  
+}
+
+html {
+  font-family: 'Times New Roman', Arial, 'sans serif';
+  font-size: 10px;
+  background-color: white;
+  background-image: url('movies-1.jpg');
+ 
+}
+
+.card {
+  width: 58em;
+  height: 58em;
+  margin: 5em auto;
+  background-image:url('Yellow.jpg');
+  background-color: white;
+  border: 0.3em solid black;
+  border-radius: 2em;
+}
+
+.card h2, .card p {
+  margin: 0;
+}
+
+/* Header and footer */
+
+.card header, .card footer {
+  height: 5em;
+  padding: 2em;
+}
+
+
+.card header h2 {
+  font-size: 4.75em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.card footer p {
+  font-size: 1.5em;
+  line-height: 2;
+}
+
+/* Main body of card (article) */
+/*
+.card article {
+  height: 25em;
+  background-color: rgba(0,0,0,0.25);
+}
+*/
+
+
+.card article p {
+  padding: 5em;
+  color: rgba(255,255,255,0.8);
+  align-content: center;
+}
+
+input[type=text] {
+    width: 50%;
+    font-weight: bold;
+    padding: 5px 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: black;
+
+  color: yellow;
+  }
+
+  #Username
+  {
+    font-size: 200%
+  }
+
+  #Password
+  {
+   font-size: 200%
+  }
+
+  
+
+
+  input[type=password] {
+     
+    width: 50%;
+    padding: 5px 5px;
+    font-weight: bold;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: yellow;
+  }
+
+ 
+  .btn , .btnRegister, .btnForgot{
+      
+    background-color: black; /* Green */
+    border: none;
+    color: yellow;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .btn:hover, .btnRegister:hover, .btnForgot:hover
+  {
+    background-color: white; /* Green */
+    color: black;
+  }
+
+  .btnRegister
+  {
+      float: left;
+  }
+
+  .btnForgot
+  {
+      float: right
+  }
+
+  .Register
+  {
+    text-align: left;
+  }
+
+  .Forgot
+  {
+      text-align: right;
+  }
