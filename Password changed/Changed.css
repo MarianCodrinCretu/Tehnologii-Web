@@ -1,0 +1,75 @@
+
+body {
+    margin: 0;
+    text-align: center;
+    
+  }
+  
+  html {
+    font-family: 'Times New Roman', Arial, 'sans serif';
+    font-size: 10px;
+    background-color: white;
+    background-image: url('teethwheels.jpg');
+   
+  }
+  
+  .formular {
+    width: 60em;
+    height: 30em;
+    margin: 10em auto;
+    background-image:url('Yellow.jpg');
+    background-color: white;
+    border: 0.3em solid black;
+    border-radius: 2em;
+  }
+  
+  .formular h2, .formular p {
+    margin: 0;
+  }
+  
+  /* Header and footer */
+  
+  .formular header, .formular footer {
+    height: 4.5em;
+    padding: 3em;
+  }
+  
+  header img 
+  {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+   /* height: 40%; */
+  }
+  
+  
+  h2 {
+    font-size: 4.75em;
+    line-height: 1.2;
+    text-align: center;
+  }
+  
+
+   
+    .btn {
+        
+      background-color: black; /* Green */
+      border: none;
+      color: yellow;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+  
+    .btn:hover
+    {
+      background-color: white; /* Green */
+      color: black;
+    }
+  
+  
+    
+  
