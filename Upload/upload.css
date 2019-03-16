@@ -1,0 +1,151 @@
+
+body {
+  margin: 0;
+  text-align: center;
+  
+}
+
+html {
+  font-family: 'Times New Roman', Arial, 'sans serif';
+  font-size: 10px;
+  background-color: white;
+  background-image: url('../Login/movies-1.jpg');
+ 
+}
+
+.formular {
+  width: 58em;
+  height: 90em;
+  margin: 5em auto;
+  background-image:url('../Login/Yellow.jpg');
+  background-color: white;
+  border: 0.3em solid black;
+  border-radius: 2em;
+}
+
+.formular h2, .formular p {
+  margin: 0;
+}
+
+/* Header and footer */
+
+.formular header, .formular footer {
+  height: 4.5em;
+  padding: 3em;
+}
+
+header img 
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+ /* height: 40%; */
+}
+
+
+h2 {
+  font-size: 4.75em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.formular footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.formular footer>div {
+  display: flex;
+  flex-direction: column;
+  height: 8em;
+}
+.formular footer>div>p {
+  align-self: center;
+}
+
+
+
+
+.formular article p {
+  padding: 5em;
+  color: rgba(255,255,255,0.8);
+  align-content: center;
+}
+
+input[type=text] {
+    width: 60%;
+    font-weight: bold;
+    padding: 5px 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: black;
+
+    color: yellow;
+  }
+
+  #Movie_Title
+  {
+    font-size: 200%
+  }
+
+  #Movie_Info
+  {
+   font-size: 200%
+  }
+
+  #Movie_Location
+  {
+   font-size: 200%
+  }
+  
+  #Question_q
+  {
+   font-size: 200%
+  }
+
+  #Scenario_I
+  {
+   font-size: 200%
+  }
+  
+  #Scenario_II
+  {
+   font-size: 200%
+  }
+
+ 
+  .btnAdd , .btnAddScen, .btnAddParts, .btnAddSource{
+      
+    background-color: black; /* Green */
+    border: none;
+    color: yellow;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 9px #999;
+  }
+
+  .btnAdd:hover, .btnAddScen:hover, .btnAddParts:hover, .btnAddSource:hover
+  {
+    background-color: black; /* Green */
+    color: yellow;
+  }
+
+  .btnAdd:active , .btnAddScen:active, .btnAddParts:active, .btnAddSource:active {
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+  .btnAddScen
+  {
+      float: left;
+  }
+
+  .btnAddParts
+  {
+      float: right;
+  }
+
