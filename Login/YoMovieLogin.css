@@ -13,7 +13,7 @@ html {
  
 }
 
-.card {
+.formular {
   width: 58em;
   height: 58em;
   margin: 5em auto;
@@ -23,13 +23,13 @@ html {
   border-radius: 2em;
 }
 
-.card h2, .card p {
+.formular h2, .formular p {
   margin: 0;
 }
 
 /* Header and footer */
 
-.card header, .card footer {
+.formular header, .formular footer {
   height: 4.5em;
   padding: 3em;
 }
@@ -50,35 +50,29 @@ h2 {
   text-align: center;
 }
 
-.card footer p {
+.formular footer p {
   font-size: 1.5em;
   line-height: 2;
 }
 
-.card footer {
+.formular footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.card footer>div {
+.formular footer>div {
   display: flex;
   flex-direction: column;
   height: 8em;
 }
-.card footer>div>p {
+.formular footer>div>p {
   align-self: center;
 }
 
-/* Main body of card (article) */
-/*
-.card article {
-  height: 25em;
-  background-color: rgba(0,0,0,0.25);
-}
-*/
 
 
-.card article p {
+
+.formular article p {
   padding: 5em;
   color: rgba(255,255,255,0.8);
   align-content: center;
