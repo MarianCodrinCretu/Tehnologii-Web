@@ -6,55 +6,40 @@
     <link rel="stylesheet" href="YoMovieLogin.css">
   </head>
   <body>
-
-
-  <div class="card">
-
-   <header>
-      
-    <img src="YoMovie.jpg" alt="YoMovie">
-      </header>
-    
-
-    <article> 
-
-       
-      <h2>Login</h2>
-          
+    <div class="card">
+      <header>
         
+        <img src="YoMovie.jpg" alt="YoMovie">
+      </header>
       
-       
-    <form action="procesator.php" method="POST">
-
-            <label for="username"><span id='Username'>Username:<br/></span></label>
-            <input type="text" id="username" required>  <br/>
+      <article>
+        
+        <h2>Login</h2>
+        
+        
+        
+        
+        <form action="procesator.php" method="POST">
+          <label for="username"><span id='Username'>Username:<br/></span></label>
+          <input type="text" id="username" required>  <br/>
           
-    
-            <label for="password"><span id='Password'>Password:<br/> </span></label>
-            <input type="password" id="password" required><br/><br/>
-         
-            <button type="submit" class="btn">Submit</button>
+          
+          <label for="password"><span id='Password'>Password:<br/> </span></label>
+          <input type="password" id="password" required><br/><br/>
+          
+          <button type="submit" class="btn">Submit</button>
         </form>
-
-
-
-
-    </article>
-
-
-    <footer>
-      <p class='Register' >Don't have an account?</p><br/>
-
-      <button type="button" class="btnRegister">Register here!</button>
-
-      <p class='Forgot' >Did you forget your password?</p><br/>
-
-      <button type="button" class="btnForgot">I SHALL PASS!!</button>
-
-
-
-    </footer>
-  </div>
-
+      </article>
+      <footer style="display: flex">
+        <div>
+          <p class='Register' >Don't have an account?</p>
+          <button type="button" class="btnRegister">Register here!</button>
+        </div>
+        <div>
+          <p class='Forgot' >Did you forget your password?</p>
+          <button type="button" class="btnForgot">I SHALL PASS!!</button>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

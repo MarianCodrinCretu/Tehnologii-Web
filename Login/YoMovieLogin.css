@@ -55,6 +55,20 @@ h2 {
   line-height: 2;
 }
 
+.card footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card footer>div {
+  display: flex;
+  flex-direction: column;
+  height: 8em;
+}
+.card footer>div>p {
+  align-self: center;
+}
+
 /* Main body of card (article) */
 /*
 .card article {
