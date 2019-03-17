@@ -1,132 +1,146 @@
-
-body {
+body
+{
+  background: black;
   margin: 0;
+}
+
+.socialmedia
+{
+  margin-right: 2px;
+  width: 20px;
+  height: 20px;
+  float: right;
+}
+
+header button
+{
+  float: right;
+  margin-right: 2px;
+}
+
+header img
+{
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+header ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ header ul li
+{
+  float: left;
+  width: 160px;
+  height: 40px;
+  background-color: grey;
+  opacity: .8;
+  line-height: 40px;
   text-align: center;
-  
+  font-size: 20px;
 }
 
-html {
-  font-family: 'Times New Roman', Arial, 'sans serif';
-  font-size: 10px;
-  background-color: white;
-  background-image: url('../Login/movies-1.jpg');
- 
+header  ul li a
+{
+  text-decoration: none;
+  color: white;
+  display: block;
 }
 
-.formular {
-  width: 58em;
-  height: 90em;
-  margin: 5em auto;
-  background-image:url('../Login/Yellow.jpg');
-  background-color: white;
-  border: 0.3em solid black;
-  border-radius: 2em;
+header  ul li a:hover
+{
+  background-color: green;
 }
 
-.formular h2, .formular p {
-  margin: 0;
+header  ul li ul li
+{
+  display: none;
 }
 
-/* Header and footer */
-
-.formular header, .formular footer {
-  height: 4.5em;
-  padding: 3em;
-}
-
-header img 
+header  ul li:hover ul li
 {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
- /* height: 40%; */
 }
 
-
-h2 {
-  font-size: 4.75em;
-  line-height: 1.2;
-  text-align: center;
-}
-
-.formular footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.formular footer>div {
+header ul li ul
+{
   display: flex;
   flex-direction: column;
-  height: 8em;
-}
-.formular footer>div>p {
-  align-self: center;
 }
 
 
+.upload h2
+{
+  color: yellow;
+  text-align: center;
 
-
-.formular article p {
-  padding: 5em;
-  color: rgba(255,255,255,0.8);
-  align-content: center;
 }
 
-input[type=text] {
-    width: 60%;
-    font-weight: bold;
-    padding: 5px 5px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    background-color: black;
 
-    color: yellow;
-  }
+.movie 
+{
 
-  #Movie_Title
-  {
-    font-size: 200%
-  }
+  /* text-align: center; */
+  width: 600px;
 
-  #Movie_Info
-  {
-   font-size: 200%
-  }
+  display: flex;
+  flex-direction: row;
+  color: #FFFF00;
+  justify-content: space-around;
+  overflow: auto;
+  border: 2px solid yellow;
+  border-radius: 8px;
+  border-spacing: 50px;
+  padding: 20px;
+  margin-left: 300px;
+  margin-bottom: 20px;
 
-  #Movie_Location
-  {
-   font-size: 200%
-  }
-  
-  #Question_q
-  {
-   font-size: 200%
-  }
+}
 
-  #Scenario_I
-  {
-   font-size: 200%
-  }
-  
-  #Scenario_II
-  {
-   font-size: 200%
-  }
+.upload_info
+{
+  display: flex;
+  flex-direction: column;
+}
 
- 
+.question_info
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.question_info select
+{
+  width: 60px;
+  height: 22.5px;
+}
+/* 
+.response 
+{
+  display: flex;
+  flex-direction: row;  
+}
+ */
+
   .btnAdd , .btnAddScen, .btnAddParts, .btnAddSource{
       
-    background-color: black; /* Green */
-    border: none;
+    background-color: grey; /* Green */
+    border: 2px solid yellow;
     color: yellow;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    box-shadow: 0 9px #999;
-  }
+/*     box-shadow: 0 9px #999;
+ */  }
 
   .btnAdd:hover, .btnAddScen:hover, .btnAddParts:hover, .btnAddSource:hover
   {
@@ -134,18 +148,25 @@ input[type=text] {
     color: yellow;
   }
 
-  .btnAdd:active , .btnAddScen:active, .btnAddParts:active, .btnAddSource:active {
-  background-color: black;
+  footer div 
+  {
+    text-align: center;
+  }
+
+  .Load 
+  {
+    text-align: center;
+  }
+  /*.btnAdd/
+  {
+    float: center;
+  } */
+
+ /*  .btnAdd:active , .btnAddScen:active, .btnAddParts:active, .btnAddSource:active {
+  background-color: grey;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+} */
 
-  .btnAddScen
-  {
-      float: left;
-  }
 
-  .btnAddParts
-  {
-      float: right;
-  }
 

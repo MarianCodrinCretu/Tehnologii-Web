@@ -1,53 +1,199 @@
 <html>
-<head>
-  <link rel="stylesheet" type="text/css" href="upload.css">
-</head>
+  <head>
+    <link rel="stylesheet" type="text/css" href="upload.css">
+  </head>
   <body>
     <div class="formular">
       <header>
         
-        <img src="../Login/YoMovieLogo.jpg" alt="YoMovie">
-      </header>
-      
-      <article> 
         
-        <h2> Upload Movie </h2><br/>
-
-        <form action="procesator.php" method="POST">
-
-          <label for="title"><span id='Movie_Title'>Movie Title:<br/></span></label>
-          <input type="text" id="title" required> <br/><br/>
- 
-          <label for="info"><span id='Movie_Info'>Movie Info:<br/></span></label>
-          <input type="text" id="info" required> <br/><br/>
-
-          <label for="location"><span id='Movie_Location'>Movie Location:<br/></span></label>
-          <input type="text" id="location" required><br/>
-          <button type="button" class="btnAddSource">From Computer</button><br/><br/><br/><br/> 
-        
-          <label for="question"><span id='Question_q'>Question:<br/></span></label>
-          <input type="text" id="question" required><br/><br/>
-
-          <label for="scenario I"><span id='Scenario_I'>Scenario I:<br/></span></label>
-          <input type="text" id="scenario I" required> <br/><br/>
-
-          <label for="scenario II"><span id='Scenario_II'>Scenario II:<br/></span></label>
-          <input type="text" id="scenario II" required> <br/><br/>
+        <a href=""><img class="socialmedia" src="../Main Page/twitter.png" /></a>
+        <a href=""><img class="socialmedia" src="../Main Page/facebook.jpg"/></a>
+        <a href=""><img class="socialmedia" src="../Main Page/instagram.jpg"/></a></br></br>
+        <button type="button">Register</button>
+        <button type="button">Log in</button>
+        </br></br><center><img src="../Main Page/movielogo.PNG" / logo="alt"></center></br></br>
+        <section>
+          <ul>
+            <li><a href=""> Show all </a>
+            <li><a href="">Genres </a>
+            <ul>
+              <li><a> Horror </a></li>
+              <li><a> Thriller </a></li>
+              <li><a> Drama </a></li>
+              <li><a> Comedy </a></li>
+              <li><a> Documentary </a></li>
+            </ul>
+          </li>
+          <li><a> Articles </a></li>
+          <li><a> Actors </a></li>
+          <li><a> Directors </a></li>
+          <li><a> News </a> </li>
+          <li> <input type="text" placeholder="Search.."> </li>
+        </ul>
+      </section>
+    </header>
     
-        </form>
-      </article>
-      <footer>
-        <div>
-          <button type="button" class="btnAddScen">Add More Scenarios</button>
-        </div>
-        <div>
-          <button type="button" class="btnAddParts">Add More Parts</button>
-        </div>
-      </footer>
-      <div>
-        <button type="button" class="btnAdd">Upload</button>
-      </div>
-
+    <div class="upload">
+      
+      <br/><h2> Upload Movie </h2><br/><br/><br/>
     </div>
+    <div class="movie">
+      <div class="upload_info">
+        
+        <label for="title"><span id='Movie_Title'>Movie Title:<br/></span></label>
+        <input type="text" id="title" required> <br/><br/>
+        
+        <label for="info"><span id='Movie_Info'>Movie Info:<br/></span></label>
+        <input type="text" id="info" required> <br/><br/>
+        <label for="location"><span id='Movie_Location'>Movie Location:<br/></span></label>
+        <input type="text" id="location" required><br/><br/>
+        <button type="button" class="btnAddSource">From Computer</button><br/><br/><br/><br/>
+      </div>
+      <div class="question_info">
+        <label for="question"><span id='Question_q'>Question:<br/></span></label>
+        <input type="text" id="question" required><br/><br/>
+        <div class="response">
+          <label for="scenario I"><span id='Scenario_I'>Scenario I:<br/></span></label>
+          <input type="text" id="scenario I" required>
+          <select name="movie_parts">
+            <option value="part_1">Part 1</option>
+            <option value="part_2">Part 2</option>
+            <option value="part_3">Part 3</option>
+            <option value="part_4">Part 4</option>
+          </select>
+          <br/><br/><br/>
+        </div>
+        <div class="response">
+          <label for="scenario II"><span id='Scenario_II'>Scenario II:<br/></span></label>
+          <input type="text" id="scenario II" required>
+          <select name="movie_parts">
+            <option value="part_1">Part 1</option>
+            <option value="part_2">Part 2</option>
+            <option value="part_3">Part 3</option>
+            <option value="part_4">Part 4</option>
+          </select>
+          <br/><br/><br/>
+        </div>
+        <button type="button" class="btnAddScen">Add More Scenarios</button>
+      </div>
+    </div>
+    <div class="movie">
+      <div class="upload_info">
+        
+        <label for="title"><span id='Movie_Title'>Movie Title:<br/></span></label>
+        <input type="text" id="title" required> <br/><br/>
+        
+        <label for="info"><span id='Movie_Info'>Movie Info:<br/></span></label>
+        <input type="text" id="info" required> <br/><br/>
+        <label for="location"><span id='Movie_Location'>Movie Location:<br/></span></label>
+        <input type="text" id="location" required><br/><br/>
+        <button type="button" class="btnAddSource">From Computer</button><br/><br/><br/><br/>
+      </div>
+      <div class="question_info">
+        <label for="question"><span id='Question_q'>Question:<br/></span></label>
+        <input type="text" id="question" required><br/><br/>
+        <div class="response">
+          <label for="scenario I"><span id='Scenario_I'>Scenario I:<br/></span></label>
+          <input type="text" id="scenario I" required>
+          <select name="movie_parts">
+            <option value="part_1">Part 1</option>
+            <option value="part_2">Part 2</option>
+            <option value="part_3">Part 3</option>
+            <option value="part_4">Part 4</option>
+          </select>
+          <br/><br/><br/>
+        </div>
+        <div class="response">
+          <label for="scenario II"><span id='Scenario_II'>Scenario II:<br/></span></label>
+          <input type="text" id="scenario II" required>
+          <select name="movie_parts">
+            <option value="part_1">Part 1</option>
+            <option value="part_2">Part 2</option>
+            <option value="part_3">Part 3</option>
+            <option value="part_4">Part 4</option>
+          </select>
+          <br/><br/><br/>
+        </div>
+        <div class="response">
+          <label for="scenario III"><span id='Scenario_II'>Scenario III:<br/></span></label>
+          <input type="text" id="scenario III" required>
+          <select name="movie_parts">
+            <option value="part_1">Part 1</option>
+            <option value="part_2">Part 2</option>
+            <option value="part_3">Part 3</option>
+            <option value="part_4">Part 4</option>
+          </select>
+          <br/><br/><br/>
+        </div>
+        <div class="response">
+          <label for="scenario II"><span id='Scenario_II'>Scenario II:<br/></span></label>
+          <input type="text" id="scenario II" required>
+          <select name="movie_parts">
+            <option value="part_1">Part 1</option>
+            <option value="part_2">Part 2</option>
+            <option value="part_3">Part 3</option>
+            <option value="part_4">Part 4</option>
+          </select>
+          <br/><br/><br/>
+        </div>
+
+
+        <button type="button" class="btnAddScen">Add More Scenarios</button>
+      </div>
+    </div>
+
+    <div class="movie">
+      <div class="upload_info">
+        
+        <label for="title"><span id='Movie_Title'>Movie Title:<br/></span></label>
+        <input type="text" id="title" required> <br/><br/>
+        
+        <label for="info"><span id='Movie_Info'>Movie Info:<br/></span></label>
+        <input type="text" id="info" required> <br/><br/>
+        <label for="location"><span id='Movie_Location'>Movie Location:<br/></span></label>
+        <input type="text" id="location" required><br/><br/>
+        <button type="button" class="btnAddSource">From Computer</button><br/><br/><br/><br/>
+      </div>
+      <div class="question_info">
+        <label for="question"><span id='Question_q'>Question:<br/></span></label>
+        <input type="text" id="question" required><br/><br/>
+        <div class="response">
+          <label for="scenario I"><span id='Scenario_I'>Scenario I:<br/></span></label>
+          <input type="text" id="scenario I" required>
+          <select name="movie_parts">
+            <option value="part_1">Part 1</option>
+            <option value="part_2">Part 2</option>
+            <option value="part_3">Part 3</option>
+            <option value="part_4">Part 4</option>
+          </select>
+          <br/><br/><br/>
+        </div>
+        <div class="response">
+          <label for="scenario II"><span id='Scenario_II'>Scenario II:<br/></span></label>
+          <input type="text" id="scenario II" required>
+          <select name="movie_parts">
+            <option value="part_1">Part 1</option>
+            <option value="part_2">Part 2</option>
+            <option value="part_3">Part 3</option>
+            <option value="part_4">Part 4</option>
+          </select>
+          <br/><br/><br/>
+        </div>
+        <button type="button" class="btnAddScen">Add More Scenarios</button>
+      </div>
+    </div>
+
+    <!-- </form> -->
+    <!-- </article> -->
+    <footer>
+      <div>
+        <button type="button" class="btnAddParts">Add More Parts</button><br/><br/><br/>
+      </div>
+    </footer>
+    <div class="Load">
+      <button type="button" class="btnAdd">Upload</button><br/><br/><br/>
+    </div>
+  </div>
 </body>
 </html>
