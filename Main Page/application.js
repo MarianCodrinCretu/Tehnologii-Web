@@ -22,17 +22,17 @@ function init() {
             }
         });
     }
-
-    function closeAllMovies() {
-        var toClose = document.getElementsByClassName("card-body");
-
-        var j;
-        for (j = 0; j < toClose.length; j++) {
-            toClose[j].style.position = "absolute";
-            toClose[j].style.top = -9999;
-            toClose[j].style.left = -9999;
-        }
-    }
-
 }
+
+function closeAllMovies() {
+    var toClose = document.getElementsByClassName("card-body");
+
+    var j;
+    for (j = 0; j < toClose.length; j++) {
+        toClose[j].style.position = "absolute";
+        toClose[j].style.top = -9999;
+        toClose[j].style.left = -9999;
+    }
+}
+
 init();
