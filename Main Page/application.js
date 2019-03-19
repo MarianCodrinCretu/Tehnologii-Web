@@ -16,8 +16,8 @@ function init() {
 
             } else {
                 content.style.position = "absolute";
-                content.style.top = -9999;
-                content.style.left = -9999;
+                content.style.top = "-9999px";
+                content.style.left = "-9999px";
                 console.log("show -> hidden");
             }
         });
@@ -30,8 +30,8 @@ function closeAllMovies() {
     var j;
     for (j = 0; j < toClose.length; j++) {
         toClose[j].style.position = "absolute";
-        toClose[j].style.top = -9999;
-        toClose[j].style.left = -9999;
+        toClose[j].style.top = "-9999px";
+        toClose[j].style.left = "-9999px";
     }
 }
 
