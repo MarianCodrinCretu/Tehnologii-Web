@@ -1,47 +1,114 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Login Screen</title>
-    <link rel="stylesheet" href="YoMovieLogin.css">
-  </head>
-  <body>
-    <div class="formular">
-      <header>
-        
-        <img src="YoMovieLogo.jpg" alt="YoMovie">
-      </header>
-      
-      <article>
-        
-        <h2>Login</h2>
-        
-        
-        
-        
-        <form action="procesator.php" method="POST">
-          <label for="username"><span id='Username'>Username:<br/></span></label>
-          <input type="text" placeholder="Username" id="username" required>  <br/>
-          
-          
-          <label for="password"><span id='Password'>Password:<br/> </span></label>
-          <input type="password" placeholder="Password" id="password" required><br/><br/>
-          
-          <button type="submit" class="btn">Submit</button>
-        </form>
-      </article>
-      
-      <footer>
-        <div>
-          <p class='Register' >Don't have an account?</p>
-          <button type="button" class="btnRegister">Register here!</button>
-        </div>
-        <div>
-          <p class='Forgot' >Did you forget your password?</p>
-          <button type="button" class="btnForgot">I SHALL PASS!!</button>
-        </div>
-      </footer>
-      
+
+<head>
+  <link rel="stylesheet" type="text/css" href="YoMovieLogin.css">
+  <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <title>YoMovie-Login</title>
+</head>
+
+<body>
+  <div class="main-container">
+
+    <div class="nav-bar">
+
+
+
+
+      <!-- <a href=""><img class="socialmedia" src="twitter.png" /></a>
+      <a href=""><img class="socialmedia" src="facebook.jpg"/></a>
+      <a href=""><img class="socialmedia" src="instagram.jpg"/></a></br></br>
+      <button type="button">Register</button>
+      <button type="button">Log in</button> -->
+
+
+
+      <div class="logo">YoMovie</div>
+      <div class="nav-menu">
+        <ul>
+          <li><a href=""> Show all </a>
+          <li><a href="">Genres </a>
+
+
+
+            <!-- <ul class="genres-menu">
+            <li><a> Horror </a></li>
+            <li><a> Thriller </a></li>
+            <li><a> Drama </a></li>
+            <li><a> Comedy </a></li>
+            <li><a> Documentary </a></li>
+          </ul> -->
+
+
+
+
+          </li>
+          <li><a> Articles </a></li>
+          <li><a> Actors </a></li>
+          <li><a> Directors </a></li>
+          <li><a> News </a> </li>
+         <!-- <li> <input type="text" placeholder="Search.."> </li> -->
+        </ul>
+      </div>
     </div>
-  </body>
+
+    
+
+
+
+<div class="movie-list">
+
+    <div class="formular">
+        <header>
+          
+          <h1>YoMovie</h1>
+        </header>
+        
+        <article>
+          
+          <h2>Login</h2>
+          
+          
+          
+          
+          <form action="procesator.php" method="POST">
+            <label for="username"><span id='Username'><i class="fas fa-user-astronaut"></i>Username:
+
+                <br/></span></label>
+            <input type="text" placeholder="Username" id="username" required>  <br/>
+            
+            
+            <label for="password"><span id='Password'><i class="fas fa-key"></i>Password:<br/> </span></label>
+            <input type="password" placeholder="Password" id="password" required><br/><br/>
+            
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </article>
+        
+        <footer>
+          <div>
+            <p class='Register' ><i class="fas fa-baby"></i>Don't have an account?</p>
+            <button type="button" class="btnRegister">Register here!</button>
+          </div>
+          <div>
+            <p class='Forgot' ><i class="fas fa-skull-crossbones"></i>Forgot your password?</p>
+            <button type="button" class="btnForgot">I SHALL PASS!!</button>
+          </div>
+        </footer>
+        
+      </div>
+
+
+
+
+
+
+    
+  </div>
+  </div>
+
+
+
+</body>
 </html>
