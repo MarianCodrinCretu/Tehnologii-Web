@@ -1,29 +1,40 @@
-@media screen and  (max-width: 500px)
-{
-  .nav-bar ul li a
-  {
-    float: none;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 500px)
-{
-  .movie-list
-  {
-    float: none;
-    width: 100%;
-    align-items: center;
-  }
-}
-
-
+/* ca sa calibreze main containeru atunci cand se reduce dim ecranului (daca nu ar fi, movie-listu s-ar pune la dreapta aiurea) */
 @media screen and (max-width: 500px)
 {
   .main-container
   {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* ca sa nu iasa filmele din movie-list cand se reduce mult dimensiunea ecranului */
+@media screen and (max-width: 662px)
+{
+  .card-media
+  {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  .card-body
+  {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+
+/* ca sa puna filmele din movie-list unu sub altu */
+@media screen and (max-width: 500px)
+{
+  .movie-list
+  {
+    float: none;
+    width: 100%;
     align-items: center;
   }
 }
