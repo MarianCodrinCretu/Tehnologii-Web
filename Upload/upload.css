@@ -22,13 +22,15 @@ html, body {
   float:right;
 }
 
-button
+.main-container button
 {
   margin-left: 2px;
   margin-right: 2px;
-  float: right;
 }
 
+.float-right {
+  float: right;
+}
 
 .socialmedia img
 {
@@ -228,4 +230,3 @@ ul li ul
   {
     text-align: center;
   }
-
