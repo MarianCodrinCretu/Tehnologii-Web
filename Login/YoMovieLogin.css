@@ -437,6 +437,24 @@ input[type=text] {
     {
       padding-right: 0;
       padding-left: 0;
+
+    }
+
+    h1 
+    {
+      font-size: 90% !important;
+    }
+
+    /*
+    .formular{
+      position:absolute;
+      left:0;
+    }
+    */
+
+    .formular{
+
+      width: 110% !important;
     }
 
     
@@ -451,6 +469,13 @@ input[type=text] {
 
 
 
+  }
+
+  @media(max-width: 330px)
+  {
+    h1 {
+     font-size: 80% !important;
+    }
   }
 
   
