@@ -11,20 +11,24 @@ html, body {
 
 
 
+
 .socialmedia
 {
-  margin-right: 2px;
+  margin-top: 3px;
+  margin-right: 3px;
+  /* width si height ca sa reduc dimensiunea iconurilor */
   width: 20px;
   height: 20px;
   float:right;
 }
 
-.socialmedia button
+button
 {
-  /*float: right; */
+  margin-left: 2px;
   margin-right: 2px;
-  display: flex;
+  float: right;
 }
+
 
 .socialmedia img
 {
