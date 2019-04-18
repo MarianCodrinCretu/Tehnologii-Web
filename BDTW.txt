@@ -1,0 +1,60 @@
+user_id     user_name     user_mail     user_password     user_gender     user_birthdate
+----------------------------------------------------------------------------------------
+1           cretumari     cretu@gmail.com   parola1         male            08/02/1998
+2           iulianguri    iulian@yahoo.com  bcg@3m          male            09/01/1994
+3           raresmunti    rares@bit.com     ase9281         male            01/08/1992
+
+
+
+
+user_id     movie_id     movie_name     movie_description     movie_link
+------------------------------------------------------------------------
+1           1            Titanic        Tequila balantan      www.youtube.com/Titanic.video1
+1           2            Haunted        Foarte horro tati     www.youtube.com/Haunted.video23
+3           3            Get out        De oscar              www.youtube.com/oscar.video.clip
+3           4            Fight club     Smecher               www.tiktok.com/videoclip1
+2           5            Romania        De asta romanesc      www.romania.ro/video.prezentare
+
+
+
+
+question_id     movie_id
+------------------------
+1                  1
+2                  1
+3                  1
+4                  1
+5                  1
+6                  2
+7                  2
+8                  2
+
+
+
+
+index     question_id     question
+----------------------------------
+              1           Sa moara?
+              2           Sa traiasca?
+              3           Pe cine salvezi?
+              4           El sau ea?
+              5           Care e piesa preferata?
+
+
+
+
+index     question_id     answer     link
+-----------------------------------------
+               1          Da         www.....
+               1          Nu         www.....
+               2          Da         www....
+               2          Nu         www....
+               3          Jon Snow   www.....
+               3          Daenarys   www.....
+               3          Targaryen  www.....
+               3          Cretu      www.....
+               
+
+
+
+
