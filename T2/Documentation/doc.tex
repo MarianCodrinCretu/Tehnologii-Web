@@ -1,0 +1,384 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{xcolor}
+\graphicspath{ {./} }
+
+\usepackage{listings}
+
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
+
+
+\title{Raport tehnic: YoMovie}
+\author{Munteanu Rares Costin, Guraliuc Iulian Bogdan, Cretu Marian Codrin, Manoleasa Tudor}
+\date{Aprilie 2019}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Abstract}
+\paragraph*{}
+YoMovie este o aplicatie ce va oferi utilizatorului posibilitatea de a urmari filme in mod interactiv.
+
+\section{Introducere}
+\paragraph*{}
+
+In cadrul proiectului YoMovie, se va construi o aplicatie ce va implementa un sistem client-server multithread, ce va fi folosita pentru a afisa sub forma unui site web informatii despre filme, actori si pentru a reda filme intr-un mod interactiv.
+
+Interactiunea provine din posibilitatea de a alege in timpul filmului vizionat, diverse scenarii de continuare, astfel deznodamantul fiind diferit in functie de scenariul ales.
+
+De asemenea, in functie de scenariile alese, utilizatorul va primi insigne si recompense bazate pe alegerile facute.
+
+Daca se doreste vizionarea clasica a unui film, se va alege un scenariu predefinit de utlizator.
+
+
+\section{Module}
+\subsection{Login/Register}
+
+\paragraph*{4.1.1}
+\paragraph*{}
+
+Creaza noi utilizatori sau permite utilizatorilor existenti sa isi acceseze contul. 
+
+Validarea se va face cu ajutorul bazei de date, unde se vor afla atat username-ul, cat si parola utilizatorului daca doreste sa se autentifice.
+
+In cazul in care doreste sa se inregistreze, noile credentiale vor fi inserate in baza de date.
+
+\subsection{Filme}
+\paragraph*{}
+
+Pe pagina principala se vor afla filme, ce vor putea fi filtrate dupa gen, actori participanti, etc.
+
+\subsection{Utilizator}
+\paragraph*{}
+
+Acesta va putea fi utilizator guest, ce nu va avea acces la toate functionalitatile aplicatiei sau utilizator logat, ce avea acces la toate functionalitatile.
+
+
+\section{Tipul Utilizatorului}
+
+\subsection{Utilizator guest}
+\paragraph*{}
+
+Utilizatorul neautentificat va putea accesa doar fatada publica a aplicatiei.
+
+Paginile incluse:
+\begin{itemize}
+  \item Pagina de start
+  \item Pagina de login
+  \item Pagina de register
+  \item Pagina inexistenta
+\end{itemize}
+
+Implicit, utilizatorul neautentificat va putea doar accesa informatii despre filme, se va putea loga sau inregistra.
+
+\subsection{Utilizator autentificat}
+
+
+\subsection{}
+\paragraph*{}
+
+Utilizatorul autentificat va putea accesa orice pagina a aplicatiei.
+
+Paginile incluse:
+
+\begin{itemize}
+  \item Pagina de start
+  \item Pagina de login
+  \item Pagina de register
+  \item Pagina de profil
+  \item Pagina de upload filme
+  \item Pagina inexistenta
+\end{itemize}
+
+Implicit, utilizatorul autentificat va putea accesa atat informatii despre filme, atat si viziona sau adauga filme, De asemenea, isi va putea accesa pagina contului, unde isi va putea vizualiza progresul, filmele vizionate si insignele primite.
+
+\section{Actori}
+
+\paragraph*{}
+
+\begin{center}
+\begin{tabular}{ |c|c| } 
+ \hline
+ Actor & Descriere \\   
+ \hline
+ \hline
+ Guest & un utilizator care nu este logat pe site \\  
+ \hline
+ \hline
+ User & un utilizator care este logat pe site \\  
+ \hline
+ \hline
+ Film & Informatii despre acesta si posibiliatea de vizionare \\  
+ \hline
+\end{tabular}
+\end{center}
+
+
+\section{Use Cases}
+\subsection{Actor Guest}
+\subsubsection{Ca si Guest as dori sa imi creez un cont}
+\paragraph*{}
+
+Un utilizator nou ar trebui sa aiba posibilitatea sa isi creeze un cont nou.
+
+\subsubsection{Ca si utilizator as dori sa imi resetez parola}
+\paragraph*{}
+
+Daca un utilizator si-a pierdut parola, ar trebui sa poata sa si-o reseteze
+printr-un formular public.
+
+\subsubsection{Ca si utlizator as dori sa ma loghez}
+\paragraph*{}
+
+Ar trebui sa existe un formular prin care utilizatorul sa poate sa se autentifice.
+
+\subsection{Actor User}
+\subsubsection{Ca si utilizator as dori sa ma deconectez}
+\paragraph*{}
+
+Un utilizator ar trebui sa se poata deconecta.
+
+\subsubsection{Ca si utilizator as dori sa imi vad pagina aferenta profilului}
+\paragraph*{}
+
+Ar trebui sa existe o pagina in care sa fie prezente informatii despre utilizator.
+
+\subsubsection{Ca si utilizator as dori sa aflu informatii despre filme}
+\paragraph*{}
+
+Ar trebui sa existe un sumar pentru fiecare film.
+
+\subsubsection{Ca si utilizator as dori sa caut un film}
+\paragraph*{}
+
+Ar trebui sa existe o bara de cautare.
+
+\subsubsection{Ca si utilizator as dori sa vizionez un film}
+\paragraph*{}
+
+Ar trebui sa existe posibilitatea de a viziona un film la alegere.
+
+\subsubsection{Ca si utilizator as dori sa incarc un film}
+\paragraph*{}
+
+Ar trebui sa existe posibilitatea de a incarca un film printr-un formular.
+
+\subsubsection{Ca si utlizator as dori sa imi vad insignele}
+\paragraph*{}
+
+Ar trebui sa existe o pagina unde se pot vedea insignele obtinute de la momentul crearii contului pana in prezent.
+
+\subsubsection{Ca si utilizator as dori sa filtrez filmele}
+\paragraph*{}
+
+Ar trebui sa existe posibilitatea de a sorta filmele dupa diverse criterii.
+
+
+
+
+\section {Diagrama bazei de date}
+
+\includegraphics[width=\linewidth]{Untitled-Diagram-7.png}
+
+\subsection{Descriere}
+\paragraph*{}
+
+Baza de Date va fi realizata in MySql conform imaginii de mai sus.
+
+Tabelele din poza sunt normalizate, neexistand posibilitatea de a avea duplicate. Tipurile de date vor fi String-uri, Integer-uri care vor memora link-urile specifice filmelor/insignelor/informatiilor despre utilizator, etc.
+
+Tabelele principale vor fi reprezentate de Movies, Questions si Answers care vor deservi functionalitatii principale a aplicatiei.
+
+Tabelele de Users si Badges vor contine informatii personale cu privire la utilizator si insignele pe care acesta le-a dobandit pe baza progresului.  
+
+\section{Diagrama Master}
+
+\includegraphics[width=\linewidth]{MasterDiagram.png}
+\bigbreak
+\bigbreak
+\paragraph*{}
+
+Din punctul de vedere al utilizatorului, acesta interactioneaza doar prin partea de view cu aplicatia.
+Din punctual de vedere al dezvoltatorilor, Ilustreaza modelul MVC al aplicatiei, care face apel si la API extern, cum ar fi YouTube API prin paradigm de programare REST.
+
+Application Programming Interfaces (APIs) reprezinta un set de procedure si tooluri care sunt folosite pentru dezvoltarea de aplicatii care fac apel la servicii externe.
+
+\section{Diagrame Use Case}
+
+\subsection{Guest sau User - login/register}
+\includegraphics[width=\linewidth]{UserLoginRegister.png}
+\paragraph*{}
+
+Utilizatorul, in aceasta faza, are la dispozitie trei aplicatii. Aplicatia de login permite introducerea unui nume de utilizator si a unei parole. Modulul interogheaza baza de date utilizatori pentru a afla daca username-ul si parola date exista. In cazul in care logarea reuseste, utilizatorul va primi un ID de sesiune, folosit pentru persistent paginii dupa logare pentru un timp bine determinat(sa spunem de ordinal catorva ore).
+
+In cazul in care sesiunea expira, utilizatorul va fi dus inapoi la pagina de logare, pentru resolicitarea procesului de logare.
+
+Utilizatorul are optiunea de a solicita schimbarea parolei, in cazul in care acesta o uita. Isi introduce username-ul si email-ul, iar interogarea bazei de date user va valida aceste date. Aplicatia va trimite la adresa indicata de email un cod generat, si va actualiza baza de date cu acel cod generat. La pasul de schimbare al parolei, utilizatorul va introduce codul trimis prin email (prin SMTP), parola noua si reconfirmarea parolei. Dupa apasarea butonului de submit, BD va da update la noile date, iar schimbarea parolei va avea loc cu success. 
+Utilizatorul are optiunea sa se inregistreze cu un username, parola si un email. In aceste conditii, se va face update la tabela de Users.
+
+\subsection{Functionalitatile barei de navigare}
+\includegraphics[width=\linewidth]{NavBarUseCase.png}
+\paragraph*{}
+
+Pentru aceasta parte, utilizatorul poate sa fie logat sau nu. 
+
+In cazul in care utilizatorul opteaza pentru logare, se valideaza logarea(in cazul in care logarea nu reuseste, se va afisa un mesaj de eroare, si se reafiseaza pagina de logare), se genereaza sesiunea. Prin folosirea navbar, utilizatorul poate sorta filmele aparute prin diverse criterii: Show All(default, Length, Number of epic threads, Number of Finals, sau le poate filtra dupa diverse criterii: Actors, Directors, Genres, sau dupa stringul transmis prin bara de sea	rch. Dupa criteriile din urma, se va crea un view intermediary, in care se va retine rezultatul acestei filtrari
+(din motivul ca filtrarea trebuie sa ramana persistent pe tot parcursul sesiunii: spre exemplu daca apas butonul filter Actors sort Length, sa afiseze filmele sortate dupa lungime, filtrate dupa criteriul de actori prestabilit).
+
+Se va apela interogarea de sortare sau de filtrare dupa cum am scris mai sus, si se va afisa utilizatorului acele filme ordonate dupa criteriile de sortare si filtrate dupa criteriile de filtrare.
+
+\subsection{Film}
+\includegraphics[width=\linewidth]{MovieFlow.png}
+\paragraph*{}
+
+Pentru acest use-case, este necesara autentificarea utilizatorului. Se reiau procedurile in ceea ce priveste validarea utilizatorului, generarea sesiunii si verificarea validitatii sesiunii. In cazul in care sesiunea a expirat, utilizatorul va reveni pe pagina de logare.
+
+Dupa logare, utilizatorul va putea accesa optiunile de sortare si de filtrare din NavBar si va putea vizualiza o lista de filme(in cazul reprezentarii noastre FrontEnd, se vor afisa mai multe carduri cu imagini corespunzatoare; acest front-end va fi generat dinamic in functie de sortari). Utilizatorul va da click pe acel card si va avea la dispozitie doua optiuni: de a evalua filmul ( de la  pana la  stele) sau de a viziona filmul.
+
+In cazul in care utilizatorul doreste sa dea rate la film, acesta va selecta reprezentarea SVG corespunzatoare, se va face update in baza de date Movies cu ratingul respective(se adauga la medie si se calculeaza media). 
+In cazul in care utilizatorul doreste sa vizioneze un film, va apasa pe iconita de Play aferenta fiecarui card, se va face apel la YouTubeAPI (la extractiile specifice) si, corespunzator linkului oferit ca raspuns din baza de date, se va face apel la acest API si se va rula un film in format embedded. In cazul in care timpul vizionarii primei parti a expirat, utilizatorul este intrebat prin fereastra de Choose Scenario ce scenariu doreste sa aleaga. Se va introga baza de date Scenarios pentru a afla bucata de film corespunzatoare filmului curent si a scenariului ales si se va rula urmatorul film. In cazul in care nu mai exista scenario aferente, se va reveni pe pagina principala.
+
+In cazul in care se oobserva ca am ales un badge, badge calculate in urma deciziilor pe care le-am luat pe parcursul filmului, la interogarea bazei de date, se va da update la tabela de users s ii se va asocia badge-ul respective. Drept consecinta, se va afisa badge-ul pe ecran.
+
+De asemenea, utilizatorul va mai avea optiunea de a adauga filme. Acesta dispune de un formular in care poate adauga diverse linkuri de pe YouTube sau video-uri locale, iar baza de date Movies va fi adaptata in acest sens. De precizat este ca BD va preciza ce fel de resursa doreste sa afiseze: video local stocat pe server sau apel la YouTubeAPI.
+
+
+\section{Descriere implementare}
+\paragraph*{}
+
+
+Am folosit MVC pe front-end ?i pe back-end. Ca ?i în cazul altor modele de design software, MVC exprim? "miezul solu?iei" unei probleme, permi?ându-i s? fie adaptat? pentru fiecare sistem.
+
+
+\begin{itemize}
+  \item Modelul este componenta central? a patternului. Exprim? comportamentul aplica?iei în ceea ce prive?te domeniul problemei, independent de interfa?a cu utilizatorul. Administreaz? direct datele, logica ?i regulile aplica?iei.
+  \item O vizualizare poate fi orice reprezentare de ie?ire a informa?iilor, cum ar fi o diagram? sau o diagram?. Sunt posibile mai multe vizualiz?ri care prezint? acelea?i informa?ii, cum ar fi o diagram? de bare pentru gestionare ?i o vizualizare tabel? pentru contabili.
+  \item A treia parte sau sec?iune, controlerul, accept? intrarea ?i o transform? în comenzi pentru model sau vizualizare.
+\end{itemize}
+
+
+\includegraphics[width=\linewidth]{MVC.png}
+
+\subsection{Front End}
+\paragraph*{}
+Tehnologii folosite:
+\begin{itemize}
+  \item html
+  \item css
+  \item javascript
+  \item ajax
+\end{itemize}
+
+\paragraph*{}
+HTML pentru structura semantic? a informa?iilor;
+
+\paragraph*{}
+CSS pentru prezentarea informa?iilor;
+
+\paragraph*{}
+Javascript pentru interactivitate, pentru procesarea informa?iilor prezentate;
+
+\paragraph*{}
+Ajax (sau AJAX), prescurtare pentru Asynchronous JavaScript and XML, este o tehnic? de programare pentru crearea de aplica?ii web interactive. Inten?ia este s? fac? paginile web s? devin? mai rapide ?i deci mai acceptate, prin schimbul în fundal al unor cantit??i mici de date cu serverul, astfel încât s? nu fie nevoie ca pagina s? fie reînc?rcat? la fiecare ac?iune a utilizatorului. Aceasta are ca scop cre?terea interactivit??ii, vitezei ?i u?urin?ei în utilizare a aplica?iilor web.
+
+\paragraph*{}
+
+
+Aplica?ia este o SPA clasic? (Application Single Page), în care este afi?at? doar strictul necesar. Am hot?rât s? utiliz?m toate componentele reutilizabile ?i s? folosim API-ul REST pe Back-End prin intermediul serviciilor oferite de AJAX.
+
+\subsection{Back End}
+\paragraph*{}
+Tehnologii folosite:
+
+\begin{itemize}
+  \item php
+  \item mysql
+  \item HTTP Live Streaming (HLS) protocol
+\end{itemize}
+
+\paragraph*{}
+PHP (acronim recursiv pentru PHP: Hypertext Preprocessor) este un limbaj de scripting de uz general, cu cod-surs? deschis (open source), utilizat pe scar? larg?, ?i care este potrivit în special pentru dezvoltarea aplica?iilor web ?i poate fi integrat în HTML.
+
+\paragraph*{}
+
+MySQL este un sistem de gestiune a bazelor de date rela?ionale.
+
+\paragraph*{}
+Am decis s? dezvolt?m cel pu?in o aplica?ie web în PHP, care va utiliza API-ul REST pentru interfa?a web. Decizia noastr? de a alege PHP se bazeaz? pe faptul c? se pred? la seminar.
+\paragraph*{}
+Transferul de stat reprezentativ (REST) este un stil arhitectural care define?te un set de constrângeri ?i propriet??i bazate pe HTTP. Serviciile Web care respect? stilul arhitectural REST sau cele mai performante servicii web asigur? interoperabilitatea între sistemele informatice de pe Internet. Serviciile web compatibile cu REST permit sistemelor solicitante s? acceseze ?i s? manipuleze reprezent?rile textuale ale resurselor web utilizând un set uniform ?i predefinit de opera?ii f?r? stat.
+
+\paragraph*{}
+Decizia de a utiliza API-ul REST sa bazat pe capacitatea de a dezvolta independent Front-End ?i Back-End, practic? care este în prezent un standard.
+\paragraph*{}
+De ce am folosit MYSQL?
+\paragraph*{}
+
+MySQL este un sistem gratuit de gestionare a bazelor de date open source (DBMS pe scurt). Un DBMS este un sistem care gestioneaz? bazele de date ?i le conecteaz? la software. De exemplu, o baz? de date MySQL poate fi utilizat? pentru a rula un site web, pentru a rula baza de date a unui ERP sau a oric?rui alt software.
+
+MySQL este un sistem puternic, gratuit, de gestionare a bazelor de date open-source, care a fost în jur de ani de zile. Este foarte stabil ?i are o comunitate mare care îi ajut? s? o între?in?, s? o depaneze ?i s? o actualizeze.
+\paragraph*{}
+
+\paragraph*{}
+
+De ce utilizam HLS?
+
+\paragraph*{}
+
+
+HLS este ast?zi cel mai utilizat protocol ?i este robust. Datele arat? c? doar 8,2\% dintre spectatori se vor întoarce la un site în timpul unui flux, dac? întâmpin? o e?ec video. Folosind un protocol compatibil, compatibil, precum HLS, va oferi cea mai bun? experien?? de audien?? posibil?.
+
+MVC Detaliat
+
+\includegraphics[width=\linewidth]{MVC_specific.png}
+
+
+\section{Extractor}
+
+\includegraphics[width=\linewidth]{extractor_diagram.png}
+
+\paragraph*{}
+
+
+Pentru furnizorul pe care îl analiz?m pentru aplica?ia noastr? (Youtube), vor exista date extrase bazate pe clasificarea ACM.
+
+\paragraph*{}
+
+Sistemul de clasificare ACM pentru anul 2012 a fost dezvoltat ca o ontologie poli ierarhic? care poate fi utilizat? în aplica?iile web semantice. Acesta înlocuie?te versiunea tradi?ional? din 1998 a Sistemului de clasificare a informa?iilor ACM (CCS). Acesta este integrat în capabilit??ile de c?utare ?i afi?area vizual? a subiectului Bibliotecii Digitale ACM.
+
+
+\paragraph*{}
+
+
+Extractorul extrage datele care urmeaz? a fi convertite în filme, care vor fi trimise la Validator. Validatorul verific? calitatea ?i proceseaz? filmul. Clasificatorul clasific? datele în func?ie de gen, etc.
+
+\paragraph*{}
+
+Ulterior, datele despre filme sunt gata pentru a fi inserate în baza de date, dup? ce au completat toate datele necesare. Inseratorul introduce în baza de date informatiile, actualizând atât tabelul Movies, cât ?i tabelele ce depind de acesta.
+
+
+\section{Referinte}
+
+\begin{enumerate}
+  \item https://www.restapitutorial.com/
+  \item https://ro.wikipedia.org/wiki/Ajax\_(programare)
+  \item https://www.quora.com/What-is-MySQL-used-for-and-what-are-its-advantages-and-disadvantages
+  \item https://www.php.net/manual/ro/intro-whatis.php
+  \item https://ro.wikipedia.org/wiki/MySQL
+  \item https://developers.google.com/youtube/v3/
+  \item https://www.dacast.com/blog/video-streaming-protocol/
+  \item https://eu.udacity.com/course/intro-to-javascript--ud803
+  \item https://eu.udacity.com/course/intro-to-ajax--ud110
+  
+\end{enumerate}
+
+\end{document}
