@@ -162,6 +162,31 @@ ul li ul
 
 }
 
+.movie_info
+{
+  background-color: #404040; 
+  display: flex;
+  flex-direction: column;
+  color: orange;
+  justify-content: space-around;
+  overflow: auto;
+  border: 7px solid orange;
+  border-radius: 8px;
+  border-spacing: 50px;
+  padding: 20px;
+  margin-left: 150px; 
+  margin-right: 150px;
+  margin-bottom: 20px;
+  font-size: 30px;
+
+}
+
+input[type=text] {
+  border: 2px solid orange;
+  border-radius: 4px;
+  height: 40px;	
+}
+
 .movie 
 {
 
@@ -180,6 +205,7 @@ ul li ul
   margin-left: 150px; 
   margin-right: 150px;
   margin-bottom: 20px;
+  font-size: 20px;
 
 }
 
@@ -187,6 +213,7 @@ ul li ul
 {
   display: flex;
   flex-direction: column;
+
 }
 
 .question_info
@@ -198,7 +225,7 @@ ul li ul
 .question_info select
 {
   width: 60px;
-  height: 21.4px;
+  height: 37.5px;
 }
 
   .btnAdd , .btnAddScen, .btnAddParts, .btnAddSource{
@@ -210,7 +237,7 @@ ul li ul
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 16px;
 /*     box-shadow: 0 9px #999;
  */  }
