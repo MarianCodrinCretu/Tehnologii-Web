@@ -6,7 +6,7 @@ class App {
 
 	protected $params = [];
 
-	public function __construct() {
+	public function __construct($pdo) {
 		$url = $this->parseUrl();
 
 		if(file_exists('../app/controllers/' . $url[0] . '.php')) {
@@ -27,7 +27,7 @@ class App {
 		}
 
 		$this->params = $url ? array_values($url) : [];
-
+        array_unshift($this->params, $pdo);
 		call_user_func_array([$this->controller, $this->method], $this->params);
 	}
 

@@ -4,9 +4,12 @@ class Home extends Controller {
 	// public function index($name = '', $otherName = '') {
 	// 	echo $name . ' ' .
 	// }
-	public function index($name = '') {
-        $user = $this->model('User');
+	public function index($pdo, $name = '') {
+        $user = $this->model('User', $pdo);
 		$user->name = $name;
-		$this->view('home/index', ['name' => $user->name]);		
-    }   
+		$movieList = $this->model('MovieList', $pdo);
+		$movies = $movieList->getMovies();
+//		$this->view('home/index', ['name' => $user->name, 'pdo' => $pdo, 'movieList' => $movieList, 'movies' => $movies]);
+        $this->view('MovieListView', $movieList);
+    }
 }
