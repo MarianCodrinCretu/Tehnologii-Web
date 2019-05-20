@@ -109,9 +109,15 @@ ul li ul
 
 
 
-.main-container{
+header > .main-container{
     width: 100%;
-    height: 100%;
+    height: 10%;
+    background: gainsboro;
+}
+
+main-container{
+    width: 100%;
+    height: 10%;
     background: gainsboro;
 }
 
