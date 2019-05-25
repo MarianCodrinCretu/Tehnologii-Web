@@ -41,6 +41,7 @@ class MovieListView {
         <li><a href=""> Actors </a></li>
         <li><a href=""> Directors </a></li>
         <li><a href=""> News </a> </li>
+        <li><a id = "random_movie"> Random </a></li>
         <li> <input type="text" placeholder="Search.."> </li>
       </ul>
   </div>
@@ -67,11 +68,14 @@ class MovieListView {
       <div class="card-media">
         <img alt = "" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9Kwse6AK8gVJmLes8B4LSY9HXOhK8CxXdbB0Teqjct6xud8KO" class="card-media-img"  />
         <div class="card-media-preview flex-center">
-          <svg fill="#000000" height="18" viewBox="0 0 24 24" width="18">
-            <path d="M8 5v14l11-7z"/>
-            <path d="M0 0h24v24H0z" fill="none"/>
-          </svg>
-        </div></div>
+            <a href = "http://localhost:81/mvc2/public/index.php/?url=movie/view_movie/' . $movie['tree_id'] . '">
+                <svg fill="#000000" height="18" viewBox="0 0 24 24" width="18">
+                    <path d="M8 5v14l11-7z"/>
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+            </a>
+        </div>
+      </div>
       <div class="card-body">
         <div class="flex-row">
           <h2 class="card-body-heading" style="margin-top: 0">';
@@ -90,50 +94,57 @@ class MovieListView {
               </svg></div>
           </div>
         </div>
-        <div class="flex-collumn">
-          <ul class="card-body-stars">
-            <li>
-              <svg fill="#000000" height="28" viewBox="0 0 18 18" width="28">
-                <path d="M9 11.3l3.71 2.7-1.42-4.36L15 7h-4.55L9 2.5 7.55 7H3l3.71 2.64L5.29 14z"/>
-                <path d="M0 0h18v18H0z" fill="none"/>
-              </svg>
-            </li>
-            <li>
-              <svg fill="#000000" height="28" viewBox="0 0 18 18" width="28">
-                <path d="M9 11.3l3.71 2.7-1.42-4.36L15 7h-4.55L9 2.5 7.55 7H3l3.71 2.64L5.29 14z"/>
-                <path d="M0 0h18v18H0z" fill="none"/>
-              </svg>
-            </li>
-            <li>
-              <svg fill="#000000" height="28" viewBox="0 0 18 18" width="28">
-                <path d="M9 11.3l3.71 2.7-1.42-4.36L15 7h-4.55L9 2.5 7.55 7H3l3.71 2.64L5.29 14z"/>
-                <path d="M0 0h18v18H0z" fill="none"/>
-              </svg>
-            </li>
-            <li>
-              <svg fill="#000000" height="28" viewBox="0 0 18 18" width="28">
-                <path d="M9 11.3l3.71 2.7-1.42-4.36L15 7h-4.55L9 2.5 7.55 7H3l3.71 2.64L5.29 14z"/>
-                <path d="M0 0h18v18H0z" fill="none"/>
-              </svg>
-            </li>
-            <li>
-              <svg fill="#000000" height="28" viewBox="0 0 18 18" width="28">
-                <path d="M9 11.3l3.71 2.7-1.42-4.36L15 7h-4.55L9 2.5 7.55 7H3l3.71 2.64L5.29 14z"/>
-                <path d="M0 0h18v18H0z" fill="none"/>
-              </svg>
-            </li></ul>
-          <a href="#/" class="card-button card-button-link">';
-           $output .= $movie['description'];
-            '<span class="card-button-icon">
+        <div class="flex-collumn">';
+//          <ul class="card-body-stars">';
+//
+//            $i = 1;
+//            if ($movie['no_ratings'] > 0) {
+//                for ($i = 1; $i <= $movie['rating'] / $movie['no_ratings']; $i++) {
+//                    $output .= '<li>
+//                              <svg fill="#000000" height="28" viewBox="0 0 18 18" width="28">
+//                                <path d="M9 11.3l3.71 2.7-1.42-4.36L15 7h-4.55L9 2.5 7.55 7H3l3.71 2.64L5.29 14z"/>
+//                                <path d="M0 0h18v18H0z" fill="none"/>
+//                              </svg>
+//                            </li>';
+//                }
+//            }
+//            for(;$i <= 5; $i++) {
+//                $output .= '<li>
+//                              <svg fill="#B0A9A9" height="28" viewBox="0 0 18 18" width="28">
+//                                <path d="M9 11.3l3.71 2.7-1.42-4.36L15 7h-4.55L9 2.5 7.55 7H3l3.71 2.64L5.29 14z"/>
+//                                <path d="M0 0h18v18H0z" fill="none"/>
+//                              </svg>
+//                            </li>';
+//            }
+//
+//            $output .= '</ul>
+            $rating_final = 0;
+            if($movie['no_ratings'] > 0) {
+                $rating_final = $movie['rating'] / $movie['no_ratings'];
+            }
+//            echo $rating_final;
+//            echo '<br>';
+          $output .= '
+<div class="stars" data-rating="' . $rating_final . '">
+        <span class="star">&nbsp;</span>
+        <span class="star">&nbsp;</span>
+        <span class="star">&nbsp;</span>
+        <span class="star">&nbsp;</span>
+        <span class="star">&nbsp;</span>
+    </div>
+
+<a href="#/" class="card-button card-button-link">' .
+           $movie['description'] .
+                '<span class="card-button-icon">
               <svg fill="#000000" height="16" viewBox="0 0 24 24" width="16">
                 <path d="M0 0h24v24H0z" fill="none"/>
                 <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
               </svg>
-            </span></a>
+            </span>
+           </a>
         </div>
       </div>
-
-    </div>
+      </div>
 ';
 //            $output .= ' <a href="index.php?route=edit&amp;id=' . $joke['id'] . '">Edit</a>';
 //            $output .= '<form action="/public/index.php?route=delete" method="POST"></form>';
@@ -141,13 +152,51 @@ class MovieListView {
         }
 
         $output .= '
+    </div>
+</div>
 
 </div>
-</div>
   <script src="./application.js"></script>
+
+    
+    <script>
+        
+        //initial setup
+        document.addEventListener(\'DOMContentLoaded\', function(){
+            let stars = document.querySelectorAll(\'.star\');
+            stars.forEach(function(star){
+                star.addEventListener(\'click\', setRating); 
+            });
+            
+            let rating = parseInt(document.querySelector(\'.stars\').getAttribute(\'data-rating\'));
+            let target = stars[rating - 1];
+            target.dispatchEvent(new MouseEvent(\'click\'));
+        });
+        function setRating(ev){
+            let span = ev.currentTarget;
+            let stars = document.querySelectorAll(\'.star\');
+            let match = false;
+            let num = 0;
+            stars.forEach(function(star, index){
+                if(match){
+                    star.classList.remove(\'rated\');
+                }else{
+                    star.classList.add(\'rated\');
+                }
+                //are we currently looking at the span that was clicked
+                if(star === span){
+                    match = true;
+                    num = index + 1;
+                }
+            });
+            document.querySelector(\'.stars\').setAttribute(\'data-rating\', num);
+        }
+        
+    </script>
 </body>
 </html>
 ';
+        echo $output;
         return $output;
 
     }

@@ -11,7 +11,7 @@ class Movie {
     /* The record being represented. May come from the database or a form submission */
     private $record = [];
 
-    public function __construct(\PDO $pdo, $submitted = false, array $record = [], array $errors = []) {
+    public function __construct($pdo, $submitted = false, array $record = [], array $errors = []) {
         $this->pdo = $pdo;
         $this->record = $record;
         $this->submitted = $submitted;
@@ -22,18 +22,24 @@ class Movie {
     * @description load a record from the database
     * @param $id - ID of the record to load from the database
     */
-    public function load(int $id): Movie {
+    public function load(int $id){
         $stmt = $this->pdo->prepare('SELECT * FROM movies WHERE id = :id');
         $stmt->execute(['id' => $id]);
         $record = $stmt->fetch();
         return new Movie($this->pdo, $this->submitted, $record);
     }
 
+    public function getTree(int $id) {
+        $stmt = $this->pdo->prepare('SELECT * FROM tree WHERE id = :id');
+        $stmt->execute(['id' => $id]);
+        $record = $stmt->fetch();
+        return $record;
+    }
     /*
     * @description return the record currently being represented
     *              this may have come from the DB or $_POST
     */
-    public function getMovie(): array {
+    public function getMovie() {
         return $this->record;
     }
 
