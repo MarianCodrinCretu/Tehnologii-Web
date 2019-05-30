@@ -1,0 +1,266 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Overpass;
+    background: gainsboro;
+}
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+.socialmedia
+{
+  margin-top: 3px;
+  margin-right: 3px;
+  /* width si height ca sa reduc dimensiunea iconurilor */
+  width: 60px;
+  height: 60px;
+  float:right;
+}
+
+.main-container button
+{
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.float-right {
+  float: right;
+}
+
+.socialmedia img
+{
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+
+.nav-bar /* lista sa nu mai arate ca o lista naspa */
+{
+    width: 100%; /* bara de lungimea ecranului */
+    background: #404040; /* pun culoare pe toata bara de navigare */
+    border-bottom-left-radius: 40px; /* face colturile mai frumoase */
+    border-bottom-right-radius: 40px; /* face colturile mai frumoase */
+    position: sticky;
+    z-index: 1000;
+}
+
+.logo
+{
+    font-family: Overpass; /* decat arial, mai bine asta */
+    font-size: 28px;
+    color: white;
+    padding: 10px 30px;
+    font-weight: 700; /* face literele mai groase */
+    display: inline-block; /* ca sa fie in linie cu toate celelalte elemente din bara de navigare(adica practic o coada) */
+}
+
+.nav-menu /* optiunile de meniu show all, genres etc */
+{
+    display: inline-block;
+    width: 79%;
+    margin-left: 5%; /* sa se deplaseze fata de logo */
+}
+
+.nav-bar .nav-menu ul
+{
+  margin: 0px;
+  padding: 0px;
+  list-style: none; /* ca sa nu puna bullet in fata elementelor listei (cum s-ar pune in mod automat) */
+  display: block;
+  align-items: center;
+  border-bottom-left-radius: 40px; /* face colturile mai frumoase */
+  border-bottom-right-radius: 40px; /* face colturile mai frumoase */
+}
+
+.nav-bar .nav-menu ul li
+{
+    float: left;
+    width: 160px;
+    height: 40px;
+    opacity: .95;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.nav-bar .nav-menu ul li a:hover
+ {
+    background-color: green; /* cand duc cu clicku se face verede */
+}
+
+.nav-bar .nav-menu ul li a
+{
+    text-decoration: none; /* ca sa nu mai sublinieze cuvintele din meniu */
+    color: orange;
+}
+
+ul li ul li
+{
+ display: none;
+}
+
+ul li:hover ul li
+{
+ display: block;
+}
+
+ul li ul
+{
+  background-color: #404040;
+ display: flex;
+ flex-direction: column;
+}
+
+.main-container{
+    width: 100%;
+    height: 100%;
+    background: gainsboro;
+    /* align-items: center; */
+
+}
+
+
+
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .card {
+  background-color: #a2a2a2;
+  border-radius: 2px;
+  border: 1px solid black;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 230px;
+} */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+
+  /* align-items: center; */
+  
+}
+
+.upload h2
+{
+  color: orange;
+  text-align: center;
+  font-size: 70px;
+
+}
+
+.movie_info
+{
+  background-color: #404040; 
+  display: flex;
+  flex-direction: column;
+  color: orange;
+  justify-content: space-around;
+  overflow: auto;
+  border: 7px solid orange;
+  border-radius: 8px;
+  border-spacing: 50px;
+  padding: 20px;
+  margin-left: 150px; 
+  margin-right: 150px;
+  margin-bottom: 20px;
+  font-size: 30px;
+
+}
+
+input[type=text] {
+  border: 2px solid orange;
+  border-radius: 4px;
+  height: 40px;	
+}
+
+#image
+{
+
+}
+
+.movie 
+{
+
+  /* text-align: center; */ 
+  /* width: 600px; */
+  background-color: #404040; 
+  display: flex;
+  flex-direction: row;
+  color: orange;
+  justify-content: space-around;
+  overflow: auto;
+  border: 7px solid orange;
+  border-radius: 8px;
+  border-spacing: 50px;
+  padding: 20px;
+  margin-left: 150px; 
+  margin-right: 150px;
+  margin-bottom: 20px;
+  font-size: 20px;
+
+}
+
+.upload_info
+{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.question_info
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.question_info select
+{
+  width: 60px;
+  height: 37.5px;
+}
+
+  .btnAdd , .btnAddScen, .btnAddParts, .btnAddSource{
+      
+    background-color: black;
+    border: 2px solid orange;
+    color: orange;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 16px;
+/*     box-shadow: 0 9px #999;
+ */  }
+
+  .btnAdd:hover, .btnAddScen:hover, .btnAddParts:hover, .btnAddSource:hover
+  {
+    background-color: grey; /* Green */
+    color: orange;
+  }
+
+  footer div 
+  {
+    text-align: center;
+  }
+
+  .Load 
+  {
+    text-align: center;
+  }
